@@ -1,0 +1,41 @@
+e:\GITHUB\IAI\PA\PA2_Sentiment_Analysis\Dataset\data_processor.py:38: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  ..\torch\csrc\utils\tensor_new.cpp:204.)
+  word_vectors = torch.tensor(word_vectors, dtype=torch.float32)
+Epoch 1/10:
+Train Loss: 0.5508, Train F1: 0.7186
+Val Loss: 0.5031, Val F1: 0.7419
+
+Epoch 2/10:
+Train Loss: 0.5024, Train F1: 0.7601
+Val Loss: 0.4913, Val F1: 0.7581
+
+Epoch 3/10:
+Train Loss: 0.4959, Train F1: 0.7607
+Val Loss: 0.4827, Val F1: 0.7731
+
+Epoch 4/10:
+Train Loss: 0.4907, Train F1: 0.7661
+Val Loss: 0.4816, Val F1: 0.7760
+
+Epoch 5/10:
+Train Loss: 0.4895, Train F1: 0.7706
+Val Loss: 0.4782, Val F1: 0.7736
+
+Epoch 6/10:
+Train Loss: 0.4843, Train F1: 0.7720
+Val Loss: 0.4861, Val F1: 0.7612
+
+Epoch 7/10:
+Train Loss: 0.4859, Train F1: 0.7718
+Val Loss: 0.4757, Val F1: 0.7757
+
+Epoch 8/10:
+Train Loss: 0.4805, Train F1: 0.7732
+Val Loss: 0.4746, Val F1: 0.7797
+
+Epoch 9/10:
+Train Loss: 0.4805, Train F1: 0.7734
+Val Loss: 0.4714, Val F1: 0.7781
+
+Epoch 10/10:
+Train Loss: 0.4771, Train F1: 0.7755
+Val Loss: 0.4774, Val F1: 0.7659

@@ -1,0 +1,16 @@
+{"time":"2025-04-15T13:42:32.3323691+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"e:\\GITHUB\\IAI\\PA\\PA2_Sentiment_Analysis\\wandb\\run-20250415_134230-9iunsrru\\logs\\debug-core.log"}
+{"time":"2025-04-15T13:42:32.8068846+08:00","level":"INFO","msg":"created new stream","id":"9iunsrru"}
+{"time":"2025-04-15T13:42:32.8068846+08:00","level":"INFO","msg":"stream: started","id":"9iunsrru"}
+{"time":"2025-04-15T13:42:32.8068846+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"9iunsrru"}
+{"time":"2025-04-15T13:42:32.8068846+08:00","level":"INFO","msg":"sender: started","stream_id":"9iunsrru"}
+{"time":"2025-04-15T13:42:32.8068846+08:00","level":"INFO","msg":"handler: started","stream_id":"9iunsrru"}
+{"time":"2025-04-15T13:42:33.1096513+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-15T13:44:56.5207118+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-15T13:44:56.5207118+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-15T13:44:57.5322432+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.2220872,"progress":"722B/722B"}],"total_operations":1}}
+{"time":"2025-04-15T13:44:57.6385929+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-15T13:44:58.1003733+08:00","level":"INFO","msg":"stream: closing","id":"9iunsrru"}
+{"time":"2025-04-15T13:44:58.1003733+08:00","level":"INFO","msg":"handler: closed","stream_id":"9iunsrru"}
+{"time":"2025-04-15T13:44:58.1003733+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"9iunsrru"}
+{"time":"2025-04-15T13:44:58.1003733+08:00","level":"INFO","msg":"sender: closed","stream_id":"9iunsrru"}
+{"time":"2025-04-15T13:44:58.1003733+08:00","level":"INFO","msg":"stream: closed","id":"9iunsrru"}

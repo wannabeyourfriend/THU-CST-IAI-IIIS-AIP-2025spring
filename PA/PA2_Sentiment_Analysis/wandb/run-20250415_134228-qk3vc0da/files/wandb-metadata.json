@@ -1,0 +1,31 @@
+{
+  "os": "Windows-10-10.0.22631-SP0",
+  "python": "CPython 3.10.11",
+  "startedAt": "2025-04-15T05:42:29.106858Z",
+  "program": "e:\\GITHUB\\IAI\\PA\\PA2_Sentiment_Analysis\\workflow.ipynb",
+  "codePath": "PA\\PA2_Sentiment_Analysis\\workflow.ipynb",
+  "git": {
+    "remote": "git@github.com:wannabeyourfriend/THU-CST-IAI-2025spring.git",
+    "commit": "824897206a29829d5d3dffced5fac8289f5fdc40"
+  },
+  "email": "3555125903@qq.com",
+  "root": "e:\\GITHUB\\IAI\\PA\\PA2_Sentiment_Analysis",
+  "host": "Alex",
+  "executable": "d:\\py3.10\\python.exe",
+  "codePathLocal": "workflow.ipynb",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "disk": {
+    "/": {
+      "total": "403535032320",
+      "used": "52250824704"
+    }
+  },
+  "memory": {
+    "total": "14702026752"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 16
+  }
+}
