@@ -93,18 +93,65 @@ class Trainer:
         
         return metrics
     
+    # 在train方法中添加wandb.log调用
     def train(self, train_loader, val_loader, num_epochs):
         best_val_f1 = 0
         
         for epoch in range(num_epochs):
-            # 训练
-            train_metrics = self.train_epoch(train_loader)
+            # 训练阶段
+            self.model.train()
+            train_loss = 0.0
+            train_preds = []
+            train_labels = []
             
-            # 验证
-            val_metrics = self.evaluate(val_loader)
+            for batch_idx, (inputs, labels) in enumerate(train_loader):
+                inputs, labels = inputs.to(self.device), labels.to(self.device)
+                
+                # 前向传播
+                outputs = self.model(inputs)
+                loss = self.criterion(outputs, labels)
+                
+                # 反向传播和优化
+                self.optimizer.zero_grad()
+                loss.backward()
+                self.optimizer.step()
+                
+                # 累积损失
+                train_loss += loss.item()
+                
+                # 收集预测和标签
+                _, predicted = torch.max(outputs.data, 1)
+                train_preds.extend(predicted.cpu().numpy())
+                train_labels.extend(labels.cpu().numpy())
+                
+                # 每N个batch记录一次训练指标
+                if batch_idx % 10 == 0:
+                    wandb.log({
+                        'batch': epoch * len(train_loader) + batch_idx,
+                        'batch_loss': loss.item()
+                    })
             
-            # 记录到wandb
-            wandb.log({**train_metrics, **val_metrics})
+            # 计算训练指标
+            train_metrics = self.compute_metrics(train_preds, train_labels)
+            train_loss /= len(train_loader)
+            
+            # 验证阶段
+            val_metrics, val_loss = self.validate(val_loader)
+            
+            # 记录每个epoch的指标
+            wandb.log({
+                'epoch': epoch + 1,
+                'train_loss': train_loss,
+                'train_accuracy': train_metrics['accuracy'],
+                'train_precision': train_metrics['precision'],
+                'train_recall': train_metrics['recall'],
+                'train_f1': train_metrics['f1'],
+                'val_loss': val_loss,
+                'val_accuracy': val_metrics['accuracy'],
+                'val_precision': val_metrics['precision'],
+                'val_recall': val_metrics['recall'],
+                'val_f1': val_metrics['f1']
+            })
             
             # 保存最佳模型
             if val_metrics['val_f1'] > best_val_f1:

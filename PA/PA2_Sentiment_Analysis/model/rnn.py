@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 class RNNClassifier(nn.Module):
-    def __init__(self, input_dim, hidden_dim=256, num_layers=2, rnn_type='LSTM',
+    def __init__(self, input_dim, hidden_dim=256, num_layers=3, rnn_type='LSTM',
                  bidirectional=True, num_classes=2, dropout=0.5):
         super(RNNClassifier, self).__init__()
         
